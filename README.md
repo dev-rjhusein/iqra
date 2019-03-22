@@ -6,17 +6,17 @@ Asalamu Alaikum!
 I am creating a REST API using Java and Spring that serves Surahs from the Quran. I would like some feedback and error reports, if you have the time!☪️
 
 The current endpoints are:
-http://iqra.sytes.net:5555/{language}/surah?{type}={surah name}
+<h4>http://<span></span>iqra.sytes.net:5555/{language}/surah?{type}={surah_name}</h4>
 
-Language can be 'en' for english or 'ar' for arabic.
+[language] can be 'en' for english or 'ar' for arabic.
 
-Type can by 'fuzzy' for a fuzzy search (approximation) or 'exact' for an exact entry.
+[type] can by 'fuzzy' for a fuzzy search (approximation) or 'exact' for an exact entry.
 
-Surah name is the surah name IN ENGLISH (ie- "Al-Fatihah")
+[surah_name] is the surah name IN ENGLISH (ie- "Al-Fatihah")
 
-Examples for endpoints:
-http://iqra.sytes.net:5555/en/surah?fuzzy=albaqara
-or
+Examples for endpoints:<br>
+http://iqra.sytes.net:5555/en/surah?fuzzy=albaqara<br>
+or<br>
 http://iqra.sytes.net:5555/ar/surah?exact=Al-Baqarah
 
 I'd like to see if anyone comes up with errors, so please report if you find any on this post. I'll be monitoring the backend to see if any errors are thrown.
