@@ -1,4 +1,6 @@
-# iqra ☪️ اقرأ
+This API is down for maintenance. Please stay updated by watching this repo! It'll be back up with more features!
+
+<s># iqra ☪️ اقرأ
 Quran REST API
 
 Asalamu Alaikum! | السَّلَامُ عَلَيْكُمْ
@@ -146,6 +148,7 @@ Please let me know any questions or comments! Thank you!
 <li>'Al-Ikhlas'
 <li>'Al-Falaq'
 <li>'An-Nas'
+  </s>
 
 
 </ol>
