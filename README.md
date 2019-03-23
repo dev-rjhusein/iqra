@@ -31,7 +31,7 @@ I only want to open this for 8 to 12 hours, so I can make any changes I need to 
 Please let me know any questions or comments! Thank you!
 
 <ol>
-  # surah_name <i><u><b> Enter WITHOUT single quotes </b></u></i>
+  <h3><u>Exact Parameters</u></h3><i><u><b> Enter WITHOUT single quotes </b></u></i>
 <li>'Al-Fatihah'
 <li>'Al-Baqarah'
 <li>'Ali-'Imran'
