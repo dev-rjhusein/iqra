@@ -15,10 +15,11 @@ The current endpoints are:
 {surah_name} is the surah name IN ENGLISH (ie- "Al-Fatihah")
 
 Examples for endpoints:<br>
-<h3> Fuzzy: <h3>
+<h3> Fuzzy: </h3>
 http://iqra.sytes.net:5555/en/surah?fuzzy=albaqara<br>
 or<br>
-  <h3> Exact: <h3>
+  <h3> Exact: </h3>
+
 http://iqra.sytes.net:5555/ar/surah?exact=Al-Baqarah
 
 I'd like to see if anyone comes up with errors, so please report if you find any on this post. I'll be monitoring the backend to see if any errors are thrown.
