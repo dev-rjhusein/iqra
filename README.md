@@ -1,9 +1,9 @@
-# iqra | اقرأ
+# iqra ☪️ اقرأ
 Quran REST API
 
 Asalamu Alaikum! | السَّلَامُ عَلَيْكُمْ
 
-I am creating a REST API using Java and Spring that serves Surahs from the Quran. I would like some feedback and error reports, if you have the time!☪️
+I am creating a REST API using Java and Spring that serves Surahs from the Quran. I would like some feedback and error reports, if you have the time!
 
 The current endpoints are:
 <h4>http://<span></span>iqra.sytes.net:5555/{language}/surah?{type}={surah_name}</h4>
