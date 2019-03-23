@@ -1,7 +1,7 @@
-# iqra
+# iqra | اقرأ
 Quran REST API
 
-Asalamu Alaikum!
+Asalamu Alaikum! | السَّلَامُ عَلَيْكُمْ
 
 I am creating a REST API using Java and Spring that serves Surahs from the Quran. I would like some feedback and error reports, if you have the time!☪️
 
