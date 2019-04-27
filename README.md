@@ -1,6 +1,6 @@
 This API is down for maintenance. Please stay updated by watching this repo! It'll be back up with more features!
 
-<s># iqra ☪️ اقرأ
+# iqra ☪️ اقرأ
 Quran REST API
 
 Asalamu Alaikum! | السَّلَامُ عَلَيْكُمْ
