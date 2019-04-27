@@ -1,4 +1,3 @@
-This API is down for maintenance. Please stay updated by watching this repo! It'll be back up with more features!
 
 # iqra ☪️ اقرأ
 Quran REST API
