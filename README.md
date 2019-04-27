@@ -5,151 +5,72 @@ Quran REST API
 
 Asalamu Alaikum! | السَّلَامُ عَلَيْكُمْ
 
-I am creating a REST API using Java and Spring that serves Surahs from the Quran. I would like some feedback and error reports, if you have the time!
+This is a REST API that serves Surahs from the Quran - pretty straight forward.
 
-The current endpoints are:
-<h4>http://<span></span>iqra.sytes.net:5555/{{language}}/surah?{{type}}={{surah_name}}</h4>
+Endpoints:
 
-{language} can be 'en' for english or 'ar' for arabic.
+api.iqra.devrj.xyz/surah/{language code}/{type}?{parameter}={desired value}
 
-{type} can by 'fuzzy' for a fuzzy search (approximation) or 'exact' for an exact entry.<h3>See below for EXACT surah parameters </h3>
+&#x200B;
 
-{surah_name} is the surah name IN ENGLISH (ie- "Al-Fatihah")
+**{language code}** can be 'en' or 'ar' --- If you want English or Arabic text
 
-Examples for endpoints:<br>
-<h3> Fuzzy: </h3>
-http://iqra.sytes.net:5555/en/surah?fuzzy=albaqara<br>
-or<br>
-  <h3> Exact: </h3>
+**{type}** can be 'number' or 'name' --- If you want to search by Surah name, or it's number (ie. Al-Baqarah is '2')
 
-http://iqra.sytes.net:5555/ar/surah?exact=Al-Baqarah
+**{parameter}** is different depending on {type}: 
 
-I'd like to see if anyone comes up with errors, so please report if you find any on this post. I'll be monitoring the backend to see if any errors are thrown.
+If you search by **name**, then parameter can be **exact** or **fuzzy**. Exact requires you to enter a {desired value} that matches the database record exactly, so I don't suggest using it. Fuzzy will match the surah closest to what is entered, if anything. This uses MySQL's SOUNDEX() function and the Levenshtein edit distance algorithm (from Apache Commons).
 
-I'm also attempting to measure how many requests my server will handle, so I can throttle it later on. Feel free to request until your heart's content.
+If you search by **number**, then the parameter is **id***,* the {desired value} can be any integer between **1 and 114.**
 
-I only want to open this for 8 to 12 hours, so I can make any changes I need to tonight.
+EXAMPLES:
 
-Please let me know any questions or comments! Thank you!
+To search for Surah An-Nas by name and get the Arabic version.
 
-<ol>
-  <h3><u>Exact Parameters</u></h3><i><u><b> Enter WITHOUT single quotes </b></u></i>
-<li>'Al-Fatihah'
-<li>'Al-Baqarah'
-<li>'Ali-'Imran'
-<li>'An-Nisa''
-<li>'Al-Ma'idah'
-<li>'Al-An'am'
-<li>'Al-A'raf'
-<li>'Al-Anfal'
-<li>'At-Tawbah'
-<li>'Yunus'
-<li>'Hud'
-<li>'Yusuf'
-<li>'Ar-Ra'd'
-<li>'Ibrahim'
-<li>'Al-Hijr'
-<li>'An-Nahl'
-<li>'Al-Isra'
-<li>'Al-Kahf'
-<li>'Maryam'
-<li>'Taha'
-<li>'Al-Anbya'
-<li>'Al-Hajj'
-<li>'Al-Mu'minun'
-<li>'An-Nur'
-<li>'Al-Furqan'
-<li>'Ash-Shu'ara'
-<li>'An-Naml'
-<li>'Al-Qasas'
-<li>'Al-Ankabut'
-<li>'Ar-Rum'
-<li>'Luqman'
-<li>'As-Sajdah'
-<li>'Al-Ahzab'
-<li>'Saba'
-<li>'Fatir'
-<li>'Ya-Sin'
-<li>'As-Saffat'
-<li>'Sad'
-<li>'Az-Zumar'
-<li>'Ghafir'
-<li>'Fussilat'
-<li>'Ash-Shuraa'
-<li>'Az-Zukhruf'
-<li>'Ad-Dukhan'
-<li>'Al-Jathiyah'
-<li>'Al-Ahqaf'
-<li>'Muhammad'
-<li>'Al-Fath'
-<li>'Al-Hujurat'
-<li>'Qaf'
-<li>'Adh-Dhariyat'
-<li>'At-Tur'
-<li>'An-Najm'
-<li>'Al-Qamar'
-<li>'Ar-Rahman'
-<li>'Al-Waqi-ah'
-<li>'Al-Hadid'
-<li>'Al-Mujadila'
-<li>'Al-Hashr'
-<li>'Al-Mumtahanah'
-<li>'As-Saf'
-<li>'Al-Jumu'ah'
-<li>'Al-Munafiqun'
-<li>'At-Taghabun'
-<li>'At-Talaq'
-<li>'At-Tahrim'
-<li>'Al-Mulk'
-<li>'Al-Qalam'
-<li>'Al-Haqqah'
-<li>'Al-Ma'arij'
-<li>'Nuh'
-<li>'Al-Jinn'
-<li>'Al-Muzzammil'
-<li>'Al-Muddathir'
-<li>'Al-Qiyamah'
-<li>'Al-Insan'
-<li>'Al-Mursalat'
-<li>'An-Naba'
-<li>'An-Nazi'at'
-<li>''Abasa'
-<li>'At-Takwir'
-<li>'Al-Infitar'
-<li>'Al-Mutaffifin'
-<li>'Al-Inshiqaq'
-<li>'Al-Buruj'
-<li>'At-Tariq'
-<li>'Al-A'la'
-<li>'Al-Ghashiyah'
-<li>'Al-Fajr'
-<li>'Al-Balad'
-<li>'Ash-Shams'
-<li>'Al-Layl'
-<li>'Ad-Duhaa'
-<li>'Ash-Sharh'
-<li>'At-Tin'
-<li>'Al-'Alaq'
-<li>'Al-Qadr'
-<li>'Al-Bayyinah'
-<li>'Az-Zalzalah'
-<li>'Al-'Adiyat'
-<li>'Al-Qari'ah'
-<li>'At-Takathur'
-<li>'Al-'Asr'
-<li>'Al-Humazah'
-<li>'Al-Fil'
-<li>'Quraysh'
-<li>'Al-Ma'un'
-<li>'Al-Kawthar'
-<li>'Al-Kafirun'
-<li>'An-Nasr'
-<li>'Al-Masad'
-<li>'Al-Ikhlas'
-<li>'Al-Falaq'
-<li>'An-Nas'
-  </s>
+[api.iqra.devrj.xyz/surah/ar/name?fuzzy=annas](https://api.iqra.devrj.xyz/surah/ar/name?fuzzy=annas)
 
+&#x200B;
 
-</ol>
+To search for Surah Al-Qiyamah by number and get the English translation.
 
+[api.iqra.devrj.xyz/surah/en/number?id=75](https://api.iqra.devrj.xyz/surah/en/number?id=75)
+
+&#x200B;
+
+**What's returned:**
+
+title: -- The name of the surah in arabic text
+
+title\_eng: -- The name of the surah in english text
+
+ayah\_count: -- The number of ayahs in the surah (for quick iteration)
+
+ayahs: -- Numbered ayah text
+
+indicies: -- Numbered absolute ayah numbers (for loading audio files)
+
+&#x200B;
+
+**ALSO:**
+
+Audio files are hosted at [devrj.xyz/iqra/quran\_audio/{index}.mp3](https://devrj.xyz/iqra/quran_audio/{index}.mp3) (*The index is provided by the endpoints in 'indicies')*
+
+&&
+
+I made a very quick, ugly, does the trick site to demo the API, if you don't feel like searching the endpoints:
+
+[iqra.devrj.xyz](https://iqra.devrj.xyz)
+
+&#x200B;
+
+NOTES:
+
+1) This is hosted using my own raspberry pi's and the cheapy AWS Lightsail option - IT'S NOT FAST lol
+
+2) The demo site loads slower for longer surahs, because right now it loads all audio files at once. Eventually I will make a more sophisticated 'one-page' site that loads only a few at a time or on demand.
+
+3) I plan on adding support to search for specific ayahs and by juz' - Insha-allah before Ramadan
+
+&#x200B;
+
+Please make any comments or suggestions by pull request or email me at dev.rjhusein@gmail.com
