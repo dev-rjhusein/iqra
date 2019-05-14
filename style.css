@@ -1,0 +1,50 @@
+#header-image{
+}
+
+.jumbotron{
+    text-align: center;
+}
+body{
+    text-align: center;
+    background-color: #343A40;
+}
+
+li{
+    color: #FFFFFF;
+}
+
+nav div div *{
+    margin-left: 20px;
+
+}
+
+.modal{
+    text-align:left;
+}
+
+.modal h1{
+    font-size: 1em;
+}
+
+.code-font{
+    font-family: monospace;
+}
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+.green{
+    color: green;
+}
+.orange{
+    color:orange;
+}
+.purple{
+    color:purple;
+}
+
+ul{
+    list-style: none;
+}
